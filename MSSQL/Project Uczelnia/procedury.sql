@@ -46,3 +46,45 @@ DEALLOCATE PlacaKorekta;
 END;
 
 EXEC PlacaUpd 2000, 3000;
+
+====================================================================================
+
+/*Tworzenie tabeli płac*/
+
+CREATE TABLE SiatkaPlac (IdStopien Int FOREIGN KEY references StopnieTytuly, Stawka Money);
+
+/*Procedure wypelniajaca tabele stawką minimalną dla każdego stopnia naukowego
+Najwyższy IdStopien jest dla inzyniera ktory zarabia najmniej, im ważniejszy stopien tym nizszy Id*/
+
+CREATE OR ALTER PROCEDURE Sub_SiatkaPlac @MinStawka Money
+AS
+SET Nocount ON;
+DECLARE StawkaIns CURSOR FOR Select IdStopien, Stopien FROM StopnieTytuly
+							 ORDER BY IdStopien Desc;
+DECLARE @IdStopien Int, @Stopien Varchar(32);
+BEGIN
+OPEN StawkaIns;
+FETCH NEXT FROM StawkaIns INTO @IdStopien, @Stopien
+WHILE @@FETCH_STATUS =0
+BEGIN
+	IF EXISTS (SELECT 1 FROM SiatkaPlac WHERE IdStopien = @IdStopien)
+		UPDATE SiatkaPlac SET Stawka = @MinStawka WHERE IdStopien = @IdStopien;
+	ELSE
+		INSERT INTO SiatkaPlac (IdStopien, Stawka)
+		VALUES (@IdStopien, @MinStawka);
+		PRINT 'Stawka podstawowa dla stopnia ' + @Stopien + ' wynosi ' + Cast(@MinStawka as Varchar);
+		SET @MinStawka = @MinStawka *1.2;
+		FETCH NEXT FROM StawkaIns INTO @IdStopien, @Stopien;
+	END;
+CLOSE StawkaIns;
+DEALLOCATE StawkaIns;
+END;
+
+exec Sub_SiatkaPlac 3140;
+
+UPDATE Dydaktyk 
+SET Placa = Stawka
+FROM SiatkaPlac
+WHERE SiatkaPlac.IdStopien = Dydaktyk.IdStopien;
+
+Select * from Dydaktyk
