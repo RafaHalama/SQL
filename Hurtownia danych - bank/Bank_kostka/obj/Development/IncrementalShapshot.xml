@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>s15252</Database>
+    <Server>db-mssql.pjwstk.edu.pl</Server>
+    <ConnectionString>Data Source=db-mssql.pjwstk.edu.pl;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>rBZpF5JDIh45WlKEbytlKiMnzTI=5/24/2021 9:09:45 PM5/7/2021 8:14:07 PM</TimeStamp>
+        <ID>
+          <String>s15252</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>O3au8e5n+eGO/dXEw3b+DK3VSNQ=5/7/2021 10:12:29 PM5/7/2021 8:14:19 PM</TimeStamp>
+        <ID>
+          <String>s15252</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>N872WiCBKCRqB9ujIjyD9xC33Iw=5/7/2021 9:44:01 PM5/7/2021 7:23:01 PM</TimeStamp>
+        <ID>
+          <String>Rodzaj Operacji</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IRu4jq73pkJHsUJPOWc2j1jXyuE=5/7/2021 10:12:29 PM5/7/2021 7:23:43 PM</TimeStamp>
+        <ID>
+          <String>Rachunek</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>+7xA/h1iBhKIBvmo1lTztPw1Smc=5/24/2021 9:17:36 PM5/7/2021 7:26:09 PM</TimeStamp>
+        <ID>
+          <String>Czas</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>NIDb/x0Mkc2mbenG8lIC5s6P6xI=5/7/2021 9:57:10 PM5/7/2021 7:39:47 PM</TimeStamp>
+        <ID>
+          <String>Oddział Banku</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>csnxKrrMlUIrNQWa8aqw+YoqtI8=5/9/2021 2:56:01 PM5/7/2021 8:10:46 PMvLN+HWDBKSfJSQFfHO5Jr441OFo=5/7/2021 8:14:38 PM5/7/2021 8:10:46 PM</TimeStamp>
+        <ID>
+          <String>s15252</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Role</Type>
+        <TimeStamp>APQAERHjaujVjoHwoVDkbR3v/hs=5/22/2021 12:41:05 PM5/10/2021 3:35:37 PM</TimeStamp>
+        <ID>
+          <String>Role</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>knX7RQqlRMt+62acVeLBfEOQ41I=5/10/2021 3:36:05 PM5/7/2021 7:18:41 PM</TimeStamp>
+      <ID>
+        <String>s15252</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2021-05-24T19:17:51.386667Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Kostka_IDH_PRO", "Kostka_IDH_PRO.dwproj", "{1E27A359-1C1C-4D0A-A8C0-B524783A170E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E27A359-1C1C-4D0A-A8C0-B524783A170E}.Development|Default.ActiveCfg = Development
+		{1E27A359-1C1C-4D0A-A8C0-B524783A170E}.Development|Default.Build.0 = Development
+		{1E27A359-1C1C-4D0A-A8C0-B524783A170E}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9096E94-79AB-4F54-ACB3-F7E32976B029}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,274 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8238468d-1cc3-4ed3-bf07-54ecfc07f25c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Time</ID>
+  <Name>Time</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3195" scrolltop="-4815" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9472" y="14049" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Time" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3043" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e30b000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="GWIAZDA_Time" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3195</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4815</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0e4e6d0f-6879-4419-8037-e3f2fad1b8aa">
+    <DataSourceViewID>s15252</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <ErrorConfiguration dwd:design-time-name="5b32790f-e3d4-42eb-b007-a169443207ad">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="24ef6815-41dc-475d-8c96-9d45f44d58de">
+      <ID>Id Time</ID>
+      <Name>Date</Name>
+      <Type>Date</Type>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01d86f3b-35e7-4e4e-96b3-a5d464379b6e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca4b67d3-0560-4912-ae74-21607c41614e">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>IdTime</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6d4f9b0b-1bc2-4f13-9b3d-e454281e0ac1">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d94593ab-9d4d-4d7e-89af-10c90cda8ecc">
+          <TableID>GWIAZDA_Time</TableID>
+          <ColumnID>DateOfCall</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b845fc9b-7a10-422c-acb0-36a68479c3e0">
+          <AttributeID>Cal Year</AttributeID>
+          <Name>Year</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="41e2de37-2128-49b4-8e77-5d4ec1578e0f">
+          <AttributeID>Cal Month</AttributeID>
+          <Name>Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4275d582-fa4b-4123-b0ef-c2862f19446d">
+          <AttributeID>Cal Day</AttributeID>
+          <Name>Day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="52c007e8-dd30-4de8-b5c6-2ec1f2fc106d">
+          <AttributeID>Day Name</AttributeID>
+          <Name>Name of Day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bc4f8a00-8be2-4c46-a11f-d36e6b1ba386">
+          <AttributeID>Name Of Month</AttributeID>
+          <Name>Name Of Month</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7d510917-a137-48cc-9621-40ae7133823d">
+      <ID>Cal Year</ID>
+      <Name>Year</Name>
+      <Type>Years</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25f51156-39e2-47df-8b08-f3a4c6b1628b">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8976a476-df0e-4842-a6a6-e044a6fb5f0f">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>CalYear</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fe477f17-d27f-4e44-8350-ac38d3afc9a2">
+      <ID>Cal Month</ID>
+      <Name>Month</Name>
+      <Type>Months</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8560a14b-1ec2-4b9b-bee1-9b5406b840be">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9501d76-8c9c-4774-8f5a-9c946eebc8c0">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>Month_x0020_of_x0020_the_x0020_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e97bb14e-309e-48f6-b776-29ffdecdb8c8">
+      <ID>Cal Day</ID>
+      <Name>Day</Name>
+      <Type>DayOfMonth</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a52a3566-3c7d-4296-935d-134d358a862b">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="39698203-b411-45b2-aae1-70bda99719e2">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>CalDay</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="864b83b3-48b5-4455-8eaf-93cba36e0e78">
+      <ID>Day Name</ID>
+      <Name>Name of Day</Name>
+      <Type>DayOfWeek</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74936d26-be12-40f7-8785-dccab7c7b52d">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c5b6a31-1cc3-465b-b5e4-d1c59ebec6df">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>DayName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ff8972b6-cfbe-490d-af7b-1b0770764f8f">
+      <ID>Name Of Month</ID>
+      <Name>Name Of Month</Name>
+      <Type>MonthOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e21302d9-5a08-456b-aecc-b9f7523924fe">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0291d75-f360-46c9-9753-b39d8a48bb5a">
+            <TableID>GWIAZDA_Time</TableID>
+            <ColumnID>NameOfMonth</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="45f9e292-4cd6-4525-b918-8b660991fe4d">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="bcfe21d3-268f-43b0-845a-22c7bcd446ba">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceAttributeID>Cal Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="4ab7fb61-4063-4b79-8d10-f18f658826da">
+          <ID>Name Of Month</ID>
+          <Name>Name Of Month</Name>
+          <SourceAttributeID>Name Of Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="dffb2281-8bb5-4266-9684-354a5d1812a8">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Id Time</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="92e79dd8-eb79-45d6-bf74-fe4155f1987c">
+      <ID>Hierarchy 1</ID>
+      <Name>Hierarchy 1</Name>
+      <Levels>
+        <Level dwd:design-time-name="922c51cd-78b7-4c4d-95b9-01aede8370c6">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceAttributeID>Cal Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="06c5377a-fca4-4e34-926a-4660c5685061">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <SourceAttributeID>Cal Day</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="8eb3fe44-1748-4a98-a76c-f254ca486dd0">
+      <ID>Hierarchy 2</ID>
+      <Name>Hierarchy 2</Name>
+      <Levels>
+        <Level dwd:design-time-name="8d3ded20-e075-4083-b973-2a8d906c9ce2">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceAttributeID>Cal Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="d285a4e7-1101-41de-b73f-b6362daa2b5d">
+          <ID>Name of Day</ID>
+          <Name>Name of Day</Name>
+          <SourceAttributeID>Day Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

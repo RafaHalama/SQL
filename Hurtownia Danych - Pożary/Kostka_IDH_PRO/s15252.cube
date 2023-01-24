@@ -1,0 +1,315 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f2326d7a-fa13-4fe1-a6ea-6689d7d9ae67" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>s15252</ID>
+  <Name>s15252</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="191f26a2-30b9-4ff4-a281-20bec026ccad">
+      <ID>Incident</ID>
+      <Name>Incident</Name>
+      <DimensionID>Incident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7680af73-7e2f-4fb8-8452-1100b068866e">
+          <AttributeID>Incident Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1088828-46c4-4c36-9516-f5fa9c5c2886">
+          <AttributeID>Id Location</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1d231bfd-0281-495d-96e0-4a8fa20beb0d">
+          <AttributeID>Id Time</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08cc1ea5-aae4-47cd-a6a5-6183eea8dcb4">
+          <AttributeID>Id Service Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85a5d9df-bfef-4244-93e8-12c413506071">
+          <AttributeID>Id Property</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a6ec1b16-78ca-489e-8562-f91a613c7502">
+      <ID>Location</ID>
+      <Name>Location</Name>
+      <DimensionID>Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9989b8f8-48ca-49ef-b182-9bd810a8e4de">
+          <AttributeID>Id Location</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d45587c3-55a2-493a-a092-8d9085ee2702">
+          <AttributeID>Borough Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a86b03c-f864-4394-ab43-412f541e9705">
+          <AttributeID>Ward Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="e5033482-d8ba-46a4-9f7b-b8e6f02e3147">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9605d3f5-4467-4cad-a8f7-1e51c40b8db6">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="714573cc-ef31-4208-ba23-cf08a7d6347b">
+          <AttributeID>Id Time</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de913109-6264-43e8-b7c5-3fff4d35cb86">
+          <AttributeID>Cal Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9749fb53-fd9b-44d1-8dcd-37506171721d">
+          <AttributeID>Cal Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d3a3625-5466-48da-8b11-76412cb24956">
+          <AttributeID>Cal Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f0a4434d-240c-4b39-b451-1422bfa5393f">
+          <AttributeID>Day Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0eeedfb4-eedb-4c49-8d3c-fceb25f792e8">
+          <AttributeID>Name Of Month</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="338a671c-f289-41d7-b134-96290829431c">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="a681bb48-a145-497b-b330-c63a24f61d29">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="6eec14f5-b89b-4eca-b668-1cccd1445569">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="fd71f81b-abef-4e44-8cb0-f707e226c03f">
+      <ID>Service Type</ID>
+      <Name>Service Type</Name>
+      <DimensionID>Service Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="58eebea7-42ae-4d32-963a-c1558a9f6f1e">
+          <AttributeID>Id Service Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e42350a-c5cc-4cb8-9e81-d431ead79c76">
+          <AttributeID>Service Description</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58c731c9-3442-4aa0-bc6c-8701f9942410">
+          <AttributeID>Service Special Name</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="17b6ca31-23d6-4874-9e23-37f440094c86">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="f549d4b6-1b11-4bd5-86c7-19b5e7c9f7c0">
+      <ID>Property</ID>
+      <Name>Property</Name>
+      <DimensionID>Property</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="29f1829b-c40c-4b24-adee-5acf3c203409">
+          <AttributeID>Id Property</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3f692a0-a161-484e-ab99-07826da91295">
+          <AttributeID>Property Category</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="63140b2b-0072-461c-8486-1ef9d4b34fe9">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="ee795820-7f98-45b2-a741-f07e8b60cd5c">
+      <ID>Incident</ID>
+      <Name>Incident</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="96ce986d-0316-4589-8aeb-001cd7515503">
+          <ID>Incident Count</ID>
+          <Name>Incident Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="8632a4b9-1fa4-468d-b09b-8b8704f5a56f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="388a6501-dc77-4e1c-9410-c2e76e3998d3">
+              <TableID>GWIAZDA_Incident</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="ee6c871b-8ba6-4d9a-92d0-ba87bbc2f4a0">
+          <CubeDimensionID>Incident</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bbee6019-1435-4953-8463-340a9b91238d">
+              <AttributeID>Incident Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0886fad0-e8bf-4e92-b356-208ca613617a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6f41cd41-e23a-4eb1-a973-c493cd9742be">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IncidentNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="3f3319fb-94f5-449a-8043-1ec7d5d3c296">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="651bd60b-c53b-43df-aef3-12fe0640c852">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="c0acade8-6592-453a-892f-7e5d27e346d0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f54d19cb-0b08-4b70-bc2e-6c3fef097682">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdServiceType</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="28fcde1a-e290-4811-8b9f-0fd25e836e4c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="517ec2c2-ad67-42b7-8b80-59a4a7e990cd">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdLocation</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="1718eb1e-f5aa-43a9-abc4-0fdb86bd2b3b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="33f0ea28-6de6-4f19-8aab-0c696bfc8c8d">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdProperty</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="53acc55c-29d9-4d0b-a616-3498d5d53682">
+          <CubeDimensionID>Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b97e64f9-18a3-4c8d-ad07-645c5d2d2915">
+              <AttributeID>Id Location</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="55d452c2-3166-4247-80c1-96aa52f5ee36">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="00d39830-6890-4903-96bb-51a479067908">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdLocation</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="931586a6-8c5c-4725-92a8-7bdf346c2f80">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d9328c37-db87-4e01-b4dd-d704cef934f0">
+              <AttributeID>Id Time</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="44c63d40-2e7d-4d3d-b958-7d695fd183f1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="932e8bb0-e18a-471d-9460-4e2e2f198736">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7cabbc35-54bf-43ef-a839-660e277f4ec0">
+          <CubeDimensionID>Service Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3367a09b-682e-43be-9a36-3b051d867cd9">
+              <AttributeID>Id Service Type</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="881a3153-87e8-4757-9eb6-5e6696ac3de0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e9aa1c82-8459-402a-839a-8d788e4cf266">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdServiceType</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ee3325aa-4fdc-44b5-9453-d8c50b1ae1ec">
+          <CubeDimensionID>Property</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dda36b5e-6cd0-4575-b120-44fd688ef922">
+              <AttributeID>Id Property</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="759b7643-1f74-47f0-be27-aec909d27c5c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e508f493-1a50-4b33-9120-c03018f1b106">
+                    <TableID>GWIAZDA_Incident</TableID>
+                    <ColumnID>IdProperty</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="8306884e-8830-4761-a62a-bf2ccd00d831">
+    <DataSourceViewID>s15252</DataSourceViewID>
+  </Source>
+</Cube>

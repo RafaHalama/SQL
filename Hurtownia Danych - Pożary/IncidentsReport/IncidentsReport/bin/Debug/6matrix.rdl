@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>4e8bbc1d-9465-4b50-b3ff-8b21969082aa</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>SELECT NON EMPTY { [Measures].[Incident Count] } ON COLUMNS, NON EMPTY { ([Location].[Borough Name].[Borough Name].ALLMEMBERS * [Location].[Ward Name].[Ward Name].ALLMEMBERS * [Service Type].[Service Special Name].[Service Special Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [s15252] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Location</DimensionName>
+                      <HierarchyName>Borough Name</HierarchyName>
+                      <HierarchyUniqueName>[Location].[Borough Name]</HierarchyUniqueName>
+                      <LevelName>Borough Name</LevelName>
+                      <UniqueName>[Location].[Borough Name].[Borough Name]</UniqueName>
+                    </ID>
+                    <ItemCaption>Borough Name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Location</DimensionName>
+                      <HierarchyName>Ward Name</HierarchyName>
+                      <HierarchyUniqueName>[Location].[Ward Name]</HierarchyUniqueName>
+                      <LevelName>Ward Name</LevelName>
+                      <UniqueName>[Location].[Ward Name].[Ward Name]</UniqueName>
+                    </ID>
+                    <ItemCaption>Ward Name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Service Type</DimensionName>
+                      <HierarchyName>Service Special Name</HierarchyName>
+                      <HierarchyUniqueName>[Service Type].[Service Special Name]</HierarchyUniqueName>
+                      <LevelName>Service Special Name</LevelName>
+                      <UniqueName>[Service Type].[Service Special Name].[Service Special Name]</UniqueName>
+                    </ID>
+                    <ItemCaption>Service Special Name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Incident Count</MeasureName>
+                      <UniqueName>[Measures].[Incident Count]</UniqueName>
+                    </ID>
+                    <ItemCaption>Incident Count</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>s15252</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT NON EMPTY { [Measures].[Incident Count] } ON COLUMNS, NON EMPTY { ([Location].[Borough Name].[Borough Name].ALLMEMBERS * [Location].[Ward Name].[Ward Name].ALLMEMBERS * [Service Type].[Service Special Name].[Service Special Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [s15252] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="Borough_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Location].[Borough Name].[Borough Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ward_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Location].[Ward Name].[Ward Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Service_Special_Name">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Service Type].[Service Special Name].[Service Special Name]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Incident_Count">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Incident Count]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!Service_Special_Name.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>Suicide/attempts</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Suicide incidents</Value>
+                    <Style>
+                      <FontFamily>Segoe UI Light</FontFamily>
+                      <FontSize>24pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Height>0.43in</Height>
+            <Width>5in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="matrix1">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="textbox3">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style>
+                                  <Color>#333333</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>textbox3</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.21in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Incident_Count.Value)</Value>
+                                  <Style>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                            </Border>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="matrix1_Borough_Name">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Borough_Name.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Borough_Name.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.21in</Size>
+                    <CellContents>
+                      <Textbox Name="Borough_Name">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Borough_Name.Value</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Borough_Name</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="matrix1_Ward_Name">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Ward_Name.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Ward_Name.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>1in</Size>
+                    <CellContents>
+                      <Textbox Name="Ward_Name">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Ward_Name.Value</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Ward_Name</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <DataElementOutput>Output</DataElementOutput>
+                      <KeepTogether>true</KeepTogether>
+                    </TablixMember>
+                  </TablixMembers>
+                  <DataElementOutput>Output</DataElementOutput>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <RepeatRowHeaders>true</RepeatRowHeaders>
+            <DataSetName>DataSet1</DataSetName>
+            <Top>0.43in</Top>
+            <Height>0.42in</Height>
+            <Width>2in</Width>
+            <ZIndex>1</ZIndex>
+            <Style />
+          </Tablix>
+        </ReportItems>
+        <Height>2.29792in</Height>
+        <Style />
+      </Body>
+      <Width>5.96875in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>4ce04ac1-511e-4103-abb7-ae2dbb4b46f8</rd:ReportID>
+</Report>

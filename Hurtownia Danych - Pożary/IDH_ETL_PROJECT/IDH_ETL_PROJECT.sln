@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "IDH_ETL_PROJECT", "IDH_ETL_PROJECT.dtproj", "{39A9454A-1A2C-479E-A3E6-C4F3C6E63556}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39A9454A-1A2C-479E-A3E6-C4F3C6E63556}.Development|Default.ActiveCfg = Development
+		{39A9454A-1A2C-479E-A3E6-C4F3C6E63556}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F68F7F6F-5A09-46A1-9321-8E6423A17EA0}
+	EndGlobalSection
+EndGlobal

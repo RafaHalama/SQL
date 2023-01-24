@@ -1,0 +1,194 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7efa9044-4aa9-4589-9a53-03c4ec2571ff" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Incident</ID>
+  <Name>Incident</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f290a4ac-18a1-415e-8bd9-d9f404bf74bf">
+    <DataSourceViewID>s15252</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="88c8fcf2-cbc1-4647-8a90-d1fae7c4fbed">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="822c5cb8-66eb-4191-b44e-b4a2d423aa2c">
+      <ID>Incident Number</ID>
+      <Name>Incident Number</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="abbddeb3-1f96-419f-9b07-61ddc8006bfa">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3c5fdee4-eb62-4846-83fc-ed0762077bf2">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IncidentNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e11fda93-50b0-4730-a6f8-3ce3a53b1639">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b522f2da-8d9a-46af-a9b5-057bd3c00a4e">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdTime</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c13a6350-9090-4094-bd16-fe8f4ec1476c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cacfd12d-4e87-47a4-9e2c-56a1a01643ce">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdServiceType</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="068aea69-b84b-4f67-a022-9e53bfdf45cc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c354cfc2-3f33-4b1e-91a0-6d72cf680a77">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdLocation</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="64b1f839-1f39-4baf-ab64-3db60ae95145">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="31c51f94-73dd-47b5-865f-8ff9546159b5">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdProperty</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c284006c-0494-4136-b217-e6758abdb632">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d0c30370-0379-44f9-894c-fdef1745994c">
+          <TableID>GWIAZDA_Incident</TableID>
+          <ColumnID>IncidentNumber</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e01ebd9c-13c2-43db-9100-12306159d5f4">
+          <AttributeID>Id Location</AttributeID>
+          <Name>Id Location</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="aefaecc3-7553-4a55-8077-b2b5bade67cb">
+          <AttributeID>Id Time</AttributeID>
+          <Name>Id Time</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b3743d5c-0d75-43c9-8a5d-44418f0a3ae4">
+          <AttributeID>Id Service Type</AttributeID>
+          <Name>Id Service Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d5407a6a-89f5-48d8-8b0b-a3a28d800158">
+          <AttributeID>Id Property</AttributeID>
+          <Name>Id Property</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a6909e3d-6bb3-4ed7-9258-deb623400c4e">
+      <ID>Id Location</ID>
+      <Name>Id Location</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0afddd20-aeb7-49d0-baee-f07258f5e409">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5972187-958b-4b8c-8a35-cc150c85431f">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdLocation</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa8d1dbd-eab1-4a7b-9ceb-dd9e75b77873">
+      <ID>Id Time</ID>
+      <Name>Id Time</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90b7123a-60bd-445f-8667-2b01c4255c81">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c203cb47-56f6-4790-b5e0-1fa6999de18e">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdTime</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5e8e8269-785a-4f3f-afe7-462c81ace229">
+      <ID>Id Service Type</ID>
+      <Name>Id Service Type</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a6a2c80c-f6c3-4433-be59-6de688543937">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f01bc30b-f167-4779-930e-4f37a3f025b4">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdServiceType</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2847cf93-c91c-4da6-8ee3-a0de7fa7e9d3">
+      <ID>Id Property</ID>
+      <Name>Id Property</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4aa3a9a5-4428-4c80-acb0-c839ad7e6d0c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e37e2f3-d917-4217-a787-9482e891c2c9">
+            <TableID>GWIAZDA_Incident</TableID>
+            <ColumnID>IdProperty</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

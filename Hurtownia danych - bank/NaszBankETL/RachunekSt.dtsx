@@ -1,0 +1,838 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/18/2021 1:09:14 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RPQFVHC"
+  DTS:CreatorName="DESKTOP-RPQFVHC\Ryu"
+  DTS:DTSID="{C7837F12-1B26-48FF-891F-E69D8248F7D6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.157"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{C67761D8-E5F0-4C5F-8033-EE1D11A3B8D9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankStage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CC83826B-4F1D-4410-8C6B-D1C6A16E2A93}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.NaszBankStage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NaszBankStage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankTransakcyjna]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A35BAAEB-C080-4195-8D3E-184F71D3701F}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.NaszBankTransakcyjna">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=NaszBankTransakcyjna;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task Ładowanie tabeli RachunekSt"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{FFAF5A61-1940-4FED-8DA2-78F41BEE82D3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task Ładowanie tabeli RachunekSt"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB DestinationTtabela RachunekSt"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[RachunekSt]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[NumerRachunku]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="26"
+                      cachedName="NumerRachunku"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[NumerRachunku]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NumerRachunku]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[DataZalozenia]"
+                      cachedDataType="dbDate"
+                      cachedName="DataZalozenia"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DataZalozenia]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataZalozenia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[IdRachunku]"
+                      cachedDataType="i4"
+                      cachedName="IdRachunku"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdRachunkuT]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdRachunku]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[IdKlienta]"
+                      cachedDataType="i4"
+                      cachedName="IdKlienta"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdWlascicielaT]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdKlienta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[Imie]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Imie"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[ImieWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Imie]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[Nazwisko]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nazwisko"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[NazwiskoWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Nazwisko]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[DataUrodzenia]"
+                      cachedDataType="dbDate"
+                      cachedName="DataUrodzenia"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DataUrodzeniaWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataUrodzenia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[Plec]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Plec"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[PlecWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Plec]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[IdMiasta]"
+                      cachedDataType="i4"
+                      cachedName="IdMiasta"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdMiastaWlascicielaT]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdMiasta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[Dzielnica]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Dzielnica"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DzielnicaWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Dzielnica]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[NazwaMiasta]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NazwaMiasta"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[MiastoWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaMiasta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].Columns[NazwaWojewodztwa]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="NazwaWojewodztwa"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[WojewodztwoWlasciciela]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaWojewodztwa]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdRachunkuT]"
+                      dataType="i4"
+                      name="IdRachunkuT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[NumerRachunku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="26"
+                      name="NumerRachunku" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DataZalozenia]"
+                      dataType="dbDate"
+                      name="DataZalozenia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdWlascicielaT]"
+                      dataType="i4"
+                      name="IdWlascicielaT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[ImieWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="ImieWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[NazwiskoWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="NazwiskoWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DataUrodzeniaWlasciciela]"
+                      dataType="dbDate"
+                      name="DataUrodzeniaWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[PlecWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1"
+                      name="PlecWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[IdMiastaWlascicielaT]"
+                      dataType="i4"
+                      name="IdMiastaWlascicielaT" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[DzielnicaWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="DzielnicaWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[MiastoWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="MiastoWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[WojewodztwoWlasciciela]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="WojewodztwoWlasciciela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input].ExternalColumns[GrupaAktywnosci]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="GrupaAktywnosci" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source Źródło danych dla wymiaru rachunku"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select r.IdRachunku, NumerRachunku, DataZalozenia,
+k.IdKlienta, Imie, Nazwisko, DataUrodzenia, Plec,
+m.IdMiasta, isnull(Dzielnica, 'Brak danych') Dzielnica,
+NazwaMiasta, NazwaWojewodztwa
+from Rachunki r inner join Uprawnienia u
+on r.IdRachunku = u.IdRachunku
+inner join Klienci k on k.IdKlienta = u.IdKlienta
+inner join Miasta m on m.IdMiasta = k.IdMiasta
+inner join Wojewodztwa w on w.IdWojewodztwa = m.IdWojewodztwa
+where u.RodzajUprawnienia = 'Właściciel'
+order by DataZalozenia</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankTransakcyjna]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.NaszBankTransakcyjna]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdRachunku]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdRachunku]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdRachunku]"
+                      name="IdRachunku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NumerRachunku]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NumerRachunku]"
+                      length="26"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NumerRachunku]"
+                      name="NumerRachunku"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataZalozenia]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[DataZalozenia]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataZalozenia]"
+                      name="DataZalozenia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdKlienta]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdKlienta]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdKlienta]"
+                      name="IdKlienta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      length="50"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Imie]"
+                      name="Imie"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      length="50"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Nazwisko]"
+                      name="Nazwisko"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataUrodzenia]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[DataUrodzenia]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[DataUrodzenia]"
+                      name="DataUrodzenia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Plec]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Plec]"
+                      length="1"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Plec]"
+                      name="Plec"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdMiasta]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdMiasta]"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[IdMiasta]"
+                      name="IdMiasta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Dzielnica]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Dzielnica]"
+                      length="100"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[Dzielnica]"
+                      name="Dzielnica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaMiasta]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NazwaMiasta]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaMiasta]"
+                      name="NazwaMiasta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaWojewodztwa]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NazwaWojewodztwa]"
+                      length="255"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].Columns[NazwaWojewodztwa]"
+                      name="NazwaWojewodztwa"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdRachunku]"
+                      dataType="i4"
+                      name="IdRachunku" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NumerRachunku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="26"
+                      name="NumerRachunku" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[DataZalozenia]"
+                      dataType="dbDate"
+                      name="DataZalozenia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdKlienta]"
+                      dataType="i4"
+                      name="IdKlienta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Imie" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Nazwisko" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[DataUrodzenia]"
+                      dataType="dbDate"
+                      name="DataUrodzenia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Plec]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1"
+                      name="Plec" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[IdMiasta]"
+                      dataType="i4"
+                      name="IdMiasta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[Dzielnica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      name="Dzielnica" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NazwaMiasta]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="NazwaMiasta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output].ExternalColumns[NazwaWojewodztwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      name="NazwaWojewodztwa" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdRachunku]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdRachunku]"
+                      name="IdRachunku" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NumerRachunku]"
+                      codePage="1250"
+                      dataType="str"
+                      length="26"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NumerRachunku]"
+                      name="NumerRachunku" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[DataZalozenia]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[DataZalozenia]"
+                      name="DataZalozenia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdKlienta]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdKlienta]"
+                      name="IdKlienta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Imie]"
+                      name="Imie" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Nazwisko]"
+                      name="Nazwisko" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[DataUrodzenia]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[DataUrodzenia]"
+                      name="DataUrodzenia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Plec]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Plec]"
+                      name="Plec" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdMiasta]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[IdMiasta]"
+                      name="IdMiasta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Dzielnica]"
+                      codePage="1250"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[Dzielnica]"
+                      name="Dzielnica" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NazwaMiasta]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NazwaMiasta]"
+                      name="NazwaMiasta" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NazwaWojewodztwa]"
+                      codePage="1250"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[NazwaWojewodztwa]"
+                      name="NazwaWojewodztwa" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task Ładowanie tabeli RachunekSt.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task Czyszczenie tabeli RachunekSt"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D061A11D-F79C-4C17-9115-5C56DC2AEC7F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task Czyszczenie tabeli RachunekSt"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CC83826B-4F1D-4410-8C6B-D1C6A16E2A93}"
+          SQLTask:SqlStatementSource="truncate table RachunekSt"
+          SQLTask:CodePage="1250" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C10A30FF-F06B-4236-93A6-316F4E33F425}"
+      DTS:From="Package\Execute SQL Task Czyszczenie tabeli RachunekSt"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task Ładowanie tabeli RachunekSt" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="304,42"
+          Id="Package\Data Flow Task Ładowanie tabeli RachunekSt"
+          TopLeft="203,278" />
+        <NodeLayout
+          Size="327,42"
+          Id="Package\Execute SQL Task Czyszczenie tabeli RachunekSt"
+          TopLeft="306,138" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="469.5,180">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-114.5,98"
+              Start="0,0"
+              End="-114.5,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45"
+                    Point2="0,49"
+                    Point3="-4,49" />
+                  <mssgle:LineSegment
+                    End="-110.5,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-110.5,49"
+                    Point2="-114.5,49"
+                    Point3="-114.5,53" />
+                  <mssgle:LineSegment
+                    End="-114.5,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task Ładowanie tabeli RachunekSt">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="339,42"
+          Id="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku"
+          TopLeft="266,167" />
+        <NodeLayout
+          Size="277,42"
+          Id="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt"
+          TopLeft="363,330" />
+        <EdgeLayout
+          Id="Package\Data Flow Task Ładowanie tabeli RachunekSt.Paths[OLE DB Source Output]"
+          TopLeft="435.5,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66,121"
+              Start="0,0"
+              End="66,113.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.5"
+                    Point2="0,60.5"
+                    Point3="4,60.5" />
+                  <mssgle:LineSegment
+                    End="62,60.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62,60.5"
+                    Point2="66,60.5"
+                    Point3="66,64.5" />
+                  <mssgle:LineSegment
+                    End="66,113.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB Source Źródło danych dla wymiaru rachunku">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task Ładowanie tabeli RachunekSt\OLE DB DestinationTtabela RachunekSt">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
