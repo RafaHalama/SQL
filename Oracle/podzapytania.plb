@@ -1,3 +1,6 @@
+/*podzapytania testowe*/
+
+
 ===============================1===================================
 SELECT PNAME, ENAME , EXTRACT(year FROM START_DATE) as Year
 FROM EMP, PROJ, PROJ_EMP

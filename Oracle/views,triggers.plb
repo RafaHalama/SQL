@@ -1,3 +1,4 @@
+/*perspektywa wybieraj?c? wszystkie dane dotycz?ce pracowników */
 
 CREATE VIEW Prac
 (nr, nazwisko, stanowisko, placa, premia, data_zatr, nr_oddz, oddz, lok)
@@ -16,7 +17,8 @@ INSERT INTO Prac (nr, nazwisko, stanowisko, placa, premia, data_zatr, nr_oddz)
 VALUES (7899, 'KOWALSKI', 'CLERK', 2250, null, sysdate, 10);
 ROLLBACK;
 
-
+----------------------------------------------------------------------------------
+/*perspektywa pracowników zarabiaj?cych poni?ej 3000*/
 
 CREATE VIEW Prac3000 (nr, nazwisko, stanowisko, placa)
 AS SELECT EMPNO, ENAME, JOB, SAL
@@ -38,6 +40,10 @@ CREATE VIEW PracMgr (nr, nazwisko, stanowisko, placa)
  
  UPDATE PracMGR SET placa = placa +10;
  
+ 
+ ----------------------------------------------------------------------------------
+/*Wyzwalacz dzia?aj?cy na persepktywie pozwalaj?cy na dodanie nowych pracowników i dzia?ow
+*/
  
  CREATE VIEW Pracownicy
 (nazwisko, stanowisko, placa, premia, data_zatr, nr_oddz, oddz, lok)
@@ -85,6 +91,12 @@ select * from Pracownicy;
 select * from EMP;
 select * from DEPT;
 
+
+----------------------------------------------------------------------------------
+/*Wyzwalacz dzia?aj?cy na persepktywie pozwalaj?cy na dodanie nowych pracowników i dzia?ow
+Je?eli nazwisko pracownika istnieje, zmienamy dane na nowe
+Je?eli nazwa dzia?u juz istnieje, zmieniamy dane na nowe
+*/
 
 CREATE OR REPLACE VIEW  PracownicyDzialy
 (nazwisko, stanowisko, placa, premia, data_zatr, oddz, lok)
@@ -134,6 +146,15 @@ insert into PracownicyDzialy
 select * from PracownicyDzialy;
 select* from dept;
 rollback;
+
+
+----------------------------------------------------------------------------------
+/* Wyzwalacz dzia?aj?cy na perspektywie pozwalaj?cy na wstawienie nowych pracowników i nowych projektów
+Gdy nazwisko pracownika istnieje, zmieniamy dane na nowe
+Gdy nazwa projektu istnieje, zmieniamy dane na nowe
+Je?eli nr departamentu nie istnieje, wywo?ujemy error
+*/
+
 
 CREATE OR REPLACE VIEW  PracProj(nazwisko, stanowisko, placa, data_zatr, nr_dzialu, Nazwa_proj, budzet, Data_startu)
 AS SELECT ENAME, JOB, SAL, HIREDATE, emp.DEPTNO,PNAME, BUDGET, START_DATE
