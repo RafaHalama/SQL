@@ -512,11 +512,11 @@ INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1
 INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Koluszki',	3 FROM Miasto;
 INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Kadzid?o',	3 FROM Miasto;
 INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Kraków',	3 FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Pcim',	3) FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Barcelona',	19) FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Magdeburg',	10) FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Essen',	10) FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'San Sebastian', 19) FROM Miasto;
-INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Stambu?', 23) FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Pcim',	3 FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Barcelona',	19 FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Magdeburg',	10 FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Essen',	10 FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'San Sebastian', 19 FROM Miasto;
+INSERT INTO Miasto (IdMiasto,Miasto, IdPanstwo) SELECT NVL(Max(IdMiasto), 0) + 1, 'Stambu?', 23 FROM Miasto;
 
 Commit;
